@@ -9,9 +9,8 @@ class Router
     private $path;
 
     const BASE_URL                      =   'http://crunchbang.home/';
-    const MAX_URL_VAR_LENGTH            =   9;
-    const MAX_URL_VAR_LENGTH_FRONTEND   =   4;
-
+    const MAX_URL_VAR_COUNT             =   9;
+    const MAX_URL_VAR_COUNT_FRONTEND    =   4;
 
     public function __construct()
     {
@@ -23,7 +22,7 @@ class Router
         if ($this->urlVars === null) {
             $this->urlVars = array();
         }
-        for ($i = 1; $i <= self::MAX_URL_VAR_LENGTH; $i++) {
+        for ($i = 1; $i <= self::MAX_URL_VAR_COUNT; $i++) {
             if (!empty($_GET['node' . $i])) {
                 $this->urlVars[] = $_GET['node' . $i];
                 $this->path .= $_GET['node' . $i] . '/';

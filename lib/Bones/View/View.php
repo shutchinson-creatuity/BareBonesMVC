@@ -19,7 +19,11 @@ class View
         ob_get_clean();
         include $this->viewScriptPath . $viewScriptName;
         return ob_get_clean();
+    }
 
+    public function getViewScriptPath()
+    {
+        return $this->viewScriptPath;
     }
 
     public function setViewScriptPath($path)
