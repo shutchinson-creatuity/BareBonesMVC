@@ -2,19 +2,21 @@
 
 namespace Bones\Core;
 
-
-class AutoLoader {
+class AutoLoader
+{
 
     protected $namespace = '';
 
     protected $path = '';
 
-    public function __construct($namespace, $path) {
+    public function __construct($namespace, $path)
+    {
         $this->namespace = ltrim($namespace, '\\');
         $this->path      = rtrim($path, '/\\') . DIRECTORY_SEPARATOR;
     }
 
-    public function load($class) {
+    public function load($class)
+    {
         $class = ltrim($class, '\\');
         if (strpos($class, $this->namespace) === 0) {
             $nsparts   = explode('\\', $class);
@@ -30,11 +32,13 @@ class AutoLoader {
         return false;
     }
 
-    public function register() {
+    public function register()
+    {
         return spl_autoload_register(array($this, 'load'));
     }
 
-    public function unregister() {
+    public function unregister()
+    {
         return spl_autoload_unregister(array($this, 'load'));
     }
 }

@@ -16,13 +16,11 @@ class Router
     public function __construct()
     {
 
-
-
     }
 
     public function loadUrlVars()
     {
-        if($this->urlVars === null){
+        if ($this->urlVars === null) {
             $this->urlVars = array();
         }
         for ($i = 1; $i <= self::MAX_URL_VAR_LENGTH; $i++) {

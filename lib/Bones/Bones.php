@@ -7,6 +7,5 @@ if (!class_exists('\\Bones\Core\AutoLoader', true)) {
 }
 
 class Bones {
-    public $name = 'TTTTTTTTTTTTTTTTTTTTTTTTTTTt';
 
 }

@@ -26,5 +26,4 @@ class View
     {
         $this->viewScriptPath = DOC_ROOT . $path;
     }
-
 }
