@@ -1,6 +1,6 @@
 # BareBonesMVC
 
-BareBonesMVC is a tiny MVC framework for building web applications. It is currently in development, and should not be used by any means for a live web application.
+BareBonesMVC is a tiny MVC framework for building web applications. The project is currently in early development, and is missing many key features. It is currently NOT safe to be used for a live web application.
 
 ## Download
 
