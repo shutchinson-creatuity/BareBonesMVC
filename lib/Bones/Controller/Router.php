@@ -1,5 +1,7 @@
 <?php
 
+namespace Bones\Controller;
+
 class Router
 {
 
@@ -11,7 +13,8 @@ class Router
     const MAX_URL_VAR_LENGTH_FRONTEND   =   4;
 
 
-    public function __construct(){
+    public function __construct()
+    {
 
 
 
@@ -28,11 +31,10 @@ class Router
                 $this->path .= $_GET['node' . $i] . '/';
             }
         }
-        //$output = '';
-        //foreach ($this->urlVars as $currentUrlVar) {
-            //$output .= $currentUrlVar . "\n";
-        //}
-        //echo '<pre>' . $output . '</pre>';
-        //echo self::BASE_URL . $this->path;
+    }
+
+    public function getUrlVars()
+    {
+        return $this->urlVars;
     }
 }

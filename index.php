@@ -6,19 +6,17 @@ error_reporting(-1);
 define('DOC_ROOT', __DIR__ . '/');
 define('WEB_ROOT', 'http://crunchbang.home');
 
+require_once DOC_ROOT . '/lib/Bones/Bones.php';
 
-require_once DOC_ROOT . '/lib/View.php';
-require_once DOC_ROOT . '/lib/Router.php';
-
-$router = new Router;
+$router = new \Bones\Controller\Router;
 $router->loadUrlVars();
 
-$view = new View;
+$view = new \Bones\View\View;
 
 $view->urlVars = $router->getUrlVars();
 $view->main = $view->render('url/url.php');
 
 
-$view->setViewScriptPath('lib/views/layouts/');
+$view->setViewScriptPath('app/views/layouts/');
 
 echo $view->render('default.php');

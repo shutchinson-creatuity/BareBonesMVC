@@ -1,5 +1,7 @@
 <?php
 
+namespace Bones\View;
+
 class View
 {
 
@@ -7,7 +9,7 @@ class View
 
     public function __construct()
     {
-        $this->viewScriptPath = DOC_ROOT . 'lib/views/scripts/';
+        $this->viewScriptPath = DOC_ROOT . 'app/views/scripts/';
     }
 
     public function render($viewScriptName)
