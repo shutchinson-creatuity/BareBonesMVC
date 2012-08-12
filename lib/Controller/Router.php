@@ -10,9 +10,16 @@ class Router
     const MAX_URL_VAR_LENGTH            =   9;
     const MAX_URL_VAR_LENGTH_FRONTEND   =   4;
 
+
+    public function __construct(){
+
+
+
+    }
+
     public function loadUrlVars()
     {
-        if ($this->urlVars === null) {
+        if($this->urlVars === null){
             $this->urlVars = array();
         }
         for ($i = 1; $i <= self::MAX_URL_VAR_LENGTH; $i++) {
@@ -21,10 +28,11 @@ class Router
                 $this->path .= $_GET['node' . $i] . '/';
             }
         }
-    }
-
-    public function getUrlVars()
-    {
-        return $this->urlVars;
+        //$output = '';
+        //foreach ($this->urlVars as $currentUrlVar) {
+            //$output .= $currentUrlVar . "\n";
+        //}
+        //echo '<pre>' . $output . '</pre>';
+        //echo self::BASE_URL . $this->path;
     }
 }
