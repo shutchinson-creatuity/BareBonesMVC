@@ -28,11 +28,11 @@ class Router
                 $this->path .= $_GET['node' . $i] . '/';
             }
         }
-        $output = '';
-        foreach ($this->urlVars as $currentUrlVar) {
-            $output .= $currentUrlVar . "\n";
-        }
-        echo '<pre>' . $output . '</pre>';
-        echo self::BASE_URL . $this->path;
+        //$output = '';
+        //foreach ($this->urlVars as $currentUrlVar) {
+            //$output .= $currentUrlVar . "\n";
+        //}
+        //echo '<pre>' . $output . '</pre>';
+        //echo self::BASE_URL . $this->path;
     }
 }
