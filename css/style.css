@@ -95,22 +95,18 @@ html, body{
 body{
 
 }
-
 .main_wrapper{
   min-height: 100%;
   position: relative;
   padding: 0 0 240px;    /* bottom padding must be the same as header height */
 }
-
 header{
   background: #e0e0e0;
   height: 48px;
 }
-
 .main{
   padding: 60px 0 120px;
 }
-
 footer{
   position: absolute;
   bottom: 0;
@@ -159,19 +155,21 @@ footer{
 
 .url_container .url{
   list-style: none;
+  height: 20px;
   margin: 0;
   padding: 0;
-  font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 18px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .url_container .url_var{
-  color: #505050;
+  color: #707070;
 }
 .url_container .seperator{
-  margin: 0 2px;
+  padding: 0 3px;
+  color: #b8b8b8;
 }
 .url_container li{
   float: left;
-  color: #808080;
+  color: #909090;
 }
 
 
