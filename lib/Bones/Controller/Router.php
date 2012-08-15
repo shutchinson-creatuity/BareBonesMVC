@@ -5,33 +5,33 @@ namespace Bones\Controller;
 class Router
 {
 
-    private $urlVars;
-    private $path;
+    private $urlParams;
+    private $activePath;
 
-    const BASE_URL                      =   'http://crunchbang.home/';
-    const MAX_URL_VAR_COUNT             =   9;
-    const MAX_URL_VAR_COUNT_FRONTEND    =   4;
+    const BASE_URL                      =   WEB_ROOT;
+    const MAX_URL_PARAM_COUNT             =   9;
+    const MAX_URL_PARAM_COUNT_FRONTEND    =   4;
 
     public function __construct()
     {
 
     }
 
-    public function loadUrlVars()
+    public function loadUrlParams()
     {
-        if ($this->urlVars === null) {
-            $this->urlVars = array();
+        if ($this->urlParams === null) {
+            $this->urlParams = array();
         }
-        for ($i = 1; $i <= self::MAX_URL_VAR_COUNT; $i++) {
+        for ($i = 1; $i <= self::MAX_URL_PARAM_COUNT; $i++) {
             if (!empty($_GET['node' . $i])) {
-                $this->urlVars[] = $_GET['node' . $i];
+                $this->urlParams[] = $_GET['node' . $i];
                 $this->path .= $_GET['node' . $i] . '/';
             }
         }
     }
 
-    public function getUrlVars()
+    public function getUrlParams()
     {
-        return $this->urlVars;
+        return $this->urlParams;
     }
 }

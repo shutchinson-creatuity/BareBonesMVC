@@ -10,8 +10,8 @@
     <meta name="description" content="Development Environment">
     <meta name="author" content="Scott Hutchinson">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="http://crunchbang.home/css/style.css">
-    <script src="http://crunchbang.home/js/libs/modernizr-2.5.3.min.js"></script>
+    <link rel="stylesheet" href="http://barebones.shutchinson.devs.creatuity.com/css/style.css">
+    <script src="http://barebones.shutchinson.devs.creatuity.com/js/libs/modernizr-2.5.3.min.js"></script>
 </head>
 <body>
 <div class="main_wrapper">
@@ -24,7 +24,7 @@
     </header>
     <div role="main">
         <div role="main" class="main clearfix">
-            <div class="content grid_12">
+            <div class="content">
                 <?php echo $this->main; ?>
             </div>
         </div>
@@ -38,8 +38,8 @@
     </footer>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="http://crunchbang.home/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
-<script src="http://crunchbang.home/js/plugins.js"></script>
-<script src="http://crunchbang.home/js/script.js"></script>
+<script>window.jQuery || document.write('<script src="http://barebones.shutchinson.devs.creatuity.com/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+<script src="http://barebones.shutchinson.devs.creatuity.com/js/plugins.js"></script>
+<script src="http://barebones.shutchinson.devs.creatuity.com/js/script.js"></script>
 </body>
 </html>
