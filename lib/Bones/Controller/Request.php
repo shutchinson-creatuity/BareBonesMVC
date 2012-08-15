@@ -21,7 +21,7 @@ class Request
         }
         for ($i = 1; $i <= self::MAX_URL_PARAM_COUNT; $i++) {
             if (!empty($_GET['node' . $i])) {
-                $this->urlParams[] = $_GET['node' . $i];
+                $this->urlParams['node' . $i] = $_GET['node' . $i];
                 $this->activePath .= $_GET['node' . $i] . '/';
             }
         }

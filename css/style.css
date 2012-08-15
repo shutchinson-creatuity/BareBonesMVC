@@ -157,34 +157,42 @@ footer{
   border-bottom: 2px solid #0081cc
 }
 
-
-.router_data_header,
-.router_data_container{
-  height: 80px;
+.request_header{
+  margin-bottom: 40px;
 }
-.router_data_container{
-  height: 75px;
-  padding: 5px 0 0;
+.request_data_header,
+.request_data_container{
+  margin-bottom: 30px;
+  font: 16px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.content .router_data_container p{
-  line-height: 100%;
+.request_data_container p{
+  line-height: 20px;
   font-size: 16px;
+  color: #909090;
 }
-.router_data_container .url{
+.request_data_container em{
+  color: #707070;
+  font-style: normal;
+}
+.request_data_container .dash{
+  color: #c0c0c0;
+  padding: 0 4px;
+}
+.request_data_container .url{
   list-style: none;
   height: 20px;
   margin: 0;
   padding: 0;
   font: 16px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.router_data_container li{
+.request_data_container li{
   float: left;
   color: #909090;
 }
-.router_data_container .url_var{
+.request_data_container .url_param{
   color: #707070;
 }
-.router_data_container .seperator{
+.request_data_container .seperator{
   padding: 0 3px;
   color: #b8b8b8;
 }
