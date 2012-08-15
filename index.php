@@ -16,7 +16,7 @@ $view = new \Bones\View\View;
 
 $router->loadUrlParams();
 $view->urlParams = $router->getUrlParams();
-$view->path = $view->render('url/url.php');
+$view->path = $view->render('path/path.php');
 $view->main = $view->render('router/router.php');
 
 $view->setViewScriptPath('app/views/layouts/');
