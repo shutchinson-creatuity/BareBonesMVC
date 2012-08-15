@@ -133,11 +133,6 @@ footer{
   font-size: 24px;
   color: #707070;
 }
-.content h4{
-  margin: 0;
-  font-size: 18px;
-  color: #707070;
-}
 .content p{
   margin: 0 0 16px;
   /*font: 18px/180% "Hoefler Text", Constantia, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;*/
@@ -161,21 +156,18 @@ footer{
 .router_data_header,
 .router_data_container{
   height: 80px;
+  font: 18px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #707070;
 }
-.router_data_container{
-  height: 75px;
-  padding: 5px 0 0;
-}
-.content .router_data_container p{
-  line-height: 100%;
-  font-size: 16px;
+.router_data_container p{
+  font: 17px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .router_data_container .url{
   list-style: none;
   height: 20px;
   margin: 0;
   padding: 0;
-  font: 16px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 17px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .router_data_container li{
   float: left;
