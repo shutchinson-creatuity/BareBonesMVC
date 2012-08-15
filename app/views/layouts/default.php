@@ -10,8 +10,8 @@
     <meta name="description" content="Development Environment">
     <meta name="author" content="Scott Hutchinson">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="http://barebones.shutchinson.devs.creatuity.com/css/style.css">
-    <script src="http://barebones.shutchinson.devs.creatuity.com/js/libs/modernizr-2.5.3.min.js"></script>
+    <link rel="stylesheet" href="<?php echo WEB_ROOT; ?>css/style.css">
+    <script src="<?php echo WEB_ROOT; ?>js/libs/modernizr-2.5.3.min.js"></script>
 </head>
 <body>
 <div class="main_wrapper">
@@ -38,8 +38,7 @@
     </footer>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="http://barebones.shutchinson.devs.creatuity.com/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
-<script src="http://barebones.shutchinson.devs.creatuity.com/js/plugins.js"></script>
-<script src="http://barebones.shutchinson.devs.creatuity.com/js/script.js"></script>
+<script>window.jQuery || document.write('<script src="<?php echo WEB_ROOT; ?>js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+<script src="<?php echo WEB_ROOT; ?>js/plugins.js"></script>
 </body>
 </html>
