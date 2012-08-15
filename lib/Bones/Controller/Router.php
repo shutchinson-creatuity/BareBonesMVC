@@ -5,11 +5,12 @@ namespace Bones\Controller;
 class Router
 {
 
-    private $urlParams = array();
-    private $activePath = null;
-
-    const MAX_URL_PARAM_COUNT             =   9;
-    const MAX_URL_PARAM_COUNT_FRONTEND    =   4;
+    public function __construct(Request $request)
+    {
+        //echo $request->getQuery('node1');
+        //$request->setPost('username', 'shutchinson');
+        //echo $request->getPost('username');
+    }
 
     public function loadUrlParams()
     {
