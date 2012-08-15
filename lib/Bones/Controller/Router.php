@@ -5,11 +5,20 @@ namespace Bones\Controller;
 class Router
 {
 
-    public function __construct(Request $request)
+    public function __construct($request)
     {
-        //echo $request->getQuery('node1');
-        //$request->setPost('username', 'shutchinson');
-        //echo $request->getPost('username');
+        $request->setPost(array(
+            'username'  => 'derpeson',
+            'country'   => 'ar',
+            'selection' => 'cheese',
+        ));
+        echo $request->getPost('selection');
+        $request->setQuery(array(
+            'username'  => 'derpeson',
+            'country'   => 'ar',
+            'selection' => array(45, 32, 80),
+        ));
+        echo $request->getQuery('username');
     }
 
     public function loadUrlParams()

@@ -7,12 +7,15 @@ class Request
 
     private $urlParams = array();
     private $activePath = null;
+    private $baseUrl = null;
+
 
     const MAX_URL_PARAM_COUNT             =   9;
     const MAX_URL_PARAM_COUNT_FRONTEND    =   4;
 
     public function __construct()
     {
+        $this->baseUrl = WEB_ROOT;
         if ($this->urlParams === null) {
             $this->urlParams = array();
         }
@@ -31,6 +34,22 @@ class Request
         }
         return (isset($_GET[$key])) ? $_GET[$key] : $default;
     }
+
+    public function setQuery($spec, $value = null)
+    {
+        if ((null === $value) && !is_array($spec)) {
+            return false;
+        }
+        if ((null === $value) && is_array($spec)) {
+            foreach ($spec as $key => $value) {
+                $this->setQuery($key, $value);
+            }
+            return $this;
+        }
+        $_GET[(string) $spec] = $value;
+        return $this;
+    }
+
 
     public function getPost($key = null, $default = null)
     {
@@ -53,6 +72,11 @@ class Request
         }
         $_POST[(string) $spec] = $value;
         return $this;
+    }
+
+    public function getBaseUrl()
+    {
+        return $this->baseUrl;
     }
 
     public function getUrlParams()
