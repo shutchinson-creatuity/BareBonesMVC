@@ -27,9 +27,13 @@
     <h4>GET Parameters:</h4>
 </div>
 <div class="request_data_container grid_9">
-    <?php foreach ($this->urlParams as $key => $currentParam): ?>
-        <p><em><?php echo $key; ?></em><span class="dash">-</span><?php echo $currentParam; ?></p>
-    <?php endforeach; ?>
+    <?php if (!empty($this->urlParams)): ?>
+        <?php foreach ($this->urlParams as $key => $currentParam): ?>
+            <p><em><?php echo $key; ?></em><span class="dash">-</span><?php echo $currentParam; ?></p>
+        <?php endforeach; ?>
+    <?php else: ?>
+        &#160;
+    <?php endif; ?>
 </div>
 <div class="request_data_header grid_3">
     <h4>GET Parameter Count:</h4>

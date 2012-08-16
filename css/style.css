@@ -158,11 +158,11 @@ footer{
 }
 
 .request_header{
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .request_data_header,
 .request_data_container{
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   font: 16px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .request_data_container p{

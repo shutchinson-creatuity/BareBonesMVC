@@ -11,9 +11,8 @@ define('WEB_ROOT', 'http://barebones.shutchinson.devs.creatuity.com/');
 # Load the library
 require_once DOC_ROOT . '/lib/Bones/Bones.php';
 
-$request = new \Bones\Controller\Request;
-//$router = new \Bones\Controller\Router($request);
 $view = new \Bones\View\View;
+$request = new \Bones\Controller\Request;
 
 $view->urlParams = $request->getUrlParams();
 $view->baseUrl = $request->getBaseUrl();
