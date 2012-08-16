@@ -15,6 +15,8 @@ $view = new \Bones\View\View;
 $request = new \Bones\Controller\Request;
 
 $view->urlParams = $request->getUrlParams();
+$view->getParams = $request->getQuery();
+$view->serverParams = $request->getServer();
 $view->baseUrl = $request->getBaseUrl();
 $view->path = $view->render('request/path.php');
 $view->main = $view->render('request/request.php');

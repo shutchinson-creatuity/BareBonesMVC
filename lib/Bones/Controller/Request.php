@@ -37,10 +37,10 @@ class Request
 
     public function setQuery($spec, $value = null)
     {
-        if ((null === $value) && !is_array($spec)) {
+        if (($value === null) && !is_array($spec)) {
             return false;
         }
-        if ((null === $value) && is_array($spec)) {
+        if (($value === null) && is_array($spec)) {
             foreach ($spec as $key => $value) {
                 $this->setQuery($key, $value);
             }
@@ -49,7 +49,6 @@ class Request
         $_GET[(string) $spec] = $value;
         return $this;
     }
-
 
     public function getPost($key = null, $default = null)
     {
@@ -61,10 +60,10 @@ class Request
 
     public function setPost($spec, $value = null)
     {
-        if ((null === $value) && !is_array($spec)) {
+        if (($value === null) && !is_array($spec)) {
             return false;
         }
-        if ((null === $value) && is_array($spec)) {
+        if (($value === null) && is_array($spec)) {
             foreach ($spec as $key => $value) {
                 $this->setPost($key, $value);
             }
@@ -72,6 +71,14 @@ class Request
         }
         $_POST[(string) $spec] = $value;
         return $this;
+    }
+
+    public function getServer($key = null, $default = null)
+    {
+        if ($key === null) {
+            return $_SERVER;
+        }
+        return (isset($_SERVER[$key])) ? $_SERVER[$key] : $default;
     }
 
     public function getBaseUrl()
