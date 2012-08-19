@@ -21,6 +21,6 @@ $view->baseUrl = $request->getBaseUrl();
 $view->path = $view->render('request/path.php');
 $view->main = $view->render('request/request.php');
 
-$view->setViewScriptPath('app/views/layouts/');
+$view->setViewScriptPath('app/layouts/');
 
 echo $view->render('default.php');
