@@ -133,6 +133,11 @@ footer{
   font-size: 24px;
   color: #707070;
 }
+.content h4{
+  margin: 0;
+  font-size: 18px;
+  color: #707070;
+}
 .content p{
   margin: 0 0 16px;
   /*font: 18px/180% "Hoefler Text", Constantia, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;*/
@@ -152,17 +157,6 @@ footer{
   border-bottom: 2px solid #0081cc
 }
 
-<<<<<<< HEAD
-
-.router_data_header,
-.router_data_container{
-  height: 80px;
-  font: 18px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #707070;
-}
-.router_data_container p{
-  font: 17px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
-=======
 .request_header{
   margin-bottom: 20px;
 }
@@ -183,14 +177,13 @@ footer{
 .request_data_container .dash{
   color: #c0c0c0;
   padding: 0 4px;
->>>>>>> 4a3ce7c1359b5ef66734a2c47ae2918f83fd20fd
 }
 .request_data_container .url{
   list-style: none;
   height: 20px;
   margin: 0;
   padding: 0;
-  font: 17px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 16px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .request_data_container li{
   float: left;

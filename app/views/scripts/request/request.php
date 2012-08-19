@@ -17,8 +17,8 @@
     <h4>Active Node:</h4>
 </div>
 <div class="request_data_container grid_9">
-    <?php if (!empty($this->getParams)): ?>
-        <p><?php echo end($this->getParams); ?></p>
+    <?php if (!empty($this->urlParams)): ?>
+        <p><?php echo end($this->urlParams); ?></p>
     <?php else: ?>
         <p>Home</p>
     <?php endif; ?>
