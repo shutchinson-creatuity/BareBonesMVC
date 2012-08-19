@@ -10,8 +10,13 @@
     <meta name="description" content="Development Environment">
     <meta name="author" content="Scott Hutchinson">
     <meta name="viewport" content="width=device-width">
+<<<<<<< HEAD
     <link rel="stylesheet" href="http://crunchbang.home/css/style.css">
     <script src="http://crunchbang.home/js/libs/modernizr-2.5.3.min.js"></script>
+=======
+    <link rel="stylesheet" href="<?php echo WEB_ROOT; ?>css/style.css">
+    <script src="<?php echo WEB_ROOT; ?>js/libs/modernizr-2.5.3.min.js"></script>
+>>>>>>> 4a3ce7c1359b5ef66734a2c47ae2918f83fd20fd
 </head>
 <body>
 <div class="main_wrapper">
@@ -38,8 +43,13 @@
     </footer>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<<<<<<< HEAD
 <script>window.jQuery || document.write('<script src="http://crunchbang.home/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
 <script src="http://crunchbang.home/js/plugins.js"></script>
 <script src="http://crunchbang.home/js/script.js"></script>
+=======
+<script>window.jQuery || document.write('<script src="<?php echo WEB_ROOT; ?>js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+<script src="<?php echo WEB_ROOT; ?>js/plugins.js"></script>
+>>>>>>> 4a3ce7c1359b5ef66734a2c47ae2918f83fd20fd
 </body>
 </html>

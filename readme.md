@@ -4,7 +4,7 @@ BareBonesMVC is a tiny MVC framework for building web applications. The project 
 
 ## Download
 
-Clone the git repo - `git clone git://github.com/lite-plate/BareBonesMVC.git` - or [download it](https://github.com/lite-plate/BareBonesMVC/zipball/master)
+Clone the git repo - `git clone git://github.com/shutchinson-creatuity/BareBonesMVC.git` - or [download it](https://github.com/shutchinson-creatuity/BareBonesMVC/zipball/master)
 
 ## License
 
