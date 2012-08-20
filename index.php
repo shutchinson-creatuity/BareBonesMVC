@@ -6,7 +6,7 @@ error_reporting(-1);
 
 # Define global variables
 define('DOC_ROOT', __DIR__ . '/');
-define('WEB_ROOT', 'http://barebones.shutchinson.devs.creatuity.com/');
+define('WEB_ROOT', 'http://crunchbang.home/');
 
 # Load the library
 require_once DOC_ROOT . '/lib/Bones/Bones.php';
@@ -21,6 +21,6 @@ $view->baseUrl = $request->getBaseUrl();
 $view->path = $view->render('request/path.php');
 $view->main = $view->render('request/request.php');
 
-$view->setViewScriptPath('app/views/layouts/');
+$view->setViewScriptPath('app/layouts/');
 
 echo $view->render('default.php');
