@@ -14,26 +14,10 @@
     <?php echo $this->path; ?>
 </div>
 <div class="request_data_header grid_3">
-    <h4>Active Node:</h4>
+    <h4>Full URI:</h4>
 </div>
 <div class="request_data_container grid_9">
-    <?php if (!empty($this->urlParams)): ?>
-        <p><?php echo end($this->urlParams); ?></p>
-    <?php else: ?>
-        <p>Home</p>
-    <?php endif; ?>
-</div>
-<div class="request_data_header grid_3">
-    <h4>URL Nodes:</h4>
-</div>
-<div class="request_data_container grid_9">
-    <?php if (!empty($this->urlParams)): ?>
-        <?php foreach ($this->urlParams as $key => $currentParam): ?>
-            <p><em><?php echo $key; ?></em><span class="dash">&#8211;</span><?php echo $currentParam; ?></p>
-        <?php endforeach; ?>
-    <?php else: ?>
-        &#160;
-    <?php endif; ?>
+    <p><?php echo $this->baseUrl . $this->uri; ?></p>
 </div>
 <div class="request_data_header grid_3">
     <h4>GET Parameters:</h4>
