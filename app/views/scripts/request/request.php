@@ -17,7 +17,7 @@
     <h4>Full URI:</h4>
 </div>
 <div class="request_data_container grid_9">
-    <p><?php echo $this->baseUrl . $this->uri; ?></p>
+    <p><?php echo rtrim($this->baseUrl, '/') . $this->uri; ?></p>
 </div>
 <div class="request_data_header grid_3">
     <h4>GET Parameters:</h4>
@@ -26,20 +26,6 @@
     <?php if (!empty($this->getParams)): ?>
         <?php foreach ($this->getParams as $key => $currentParam): ?>
             <p><em><?php echo $key; ?></em><span class="dash">&#8211;</span><?php echo $currentParam; ?></p>
-        <?php endforeach; ?>
-    <?php else: ?>
-        &#160;
-    <?php endif; ?>
-</div>
-<div class="request_data_header grid_3">
-    <h4>SERVER Parameters:</h4>
-</div>
-<div class="request_data_container grid_9">
-    <?php if (!empty($this->serverParams)): ?>
-        <?php foreach ($this->serverParams as $key => $currentParam): ?>
-            <?php if (strcmp($key, 'SERVER_SIGNATURE') !== 0): ?>
-                <p><em><?php echo $key; ?></em><span class="dash">&#8211;</span><?php echo $currentParam; ?></p>
-            <?php endif; ?>
         <?php endforeach; ?>
     <?php else: ?>
         &#160;
