@@ -5,42 +5,46 @@ namespace Bones\Controller;
 class Request
 {
 
-    private $get        =    array();
-    private $post       =    array();
     private $uri        =    null;
     private $baseUrl    =    null;
+    private $get        =    array();
+    private $post       =    array();
+    private $server     =    array();
 
     public function __construct()
     {
-        $this->uri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '';
-        if (isset($_SERVER['QUERY_STRING'])) {
-            $this->uri = str_replace('?' . $_SERVER['QUERY_STRING'], '', $this->uri);
+        $this->get = $_GET;
+        $this->post = $_POST;
+        $this->server = $_SERVER;
+        $this->uri = isset($this->server['REQUEST_URI']) ? $this->server['REQUEST_URI'] : '';
+        if (isset($this->server['QUERY_STRING'])) {
+            $this->uri = str_replace('?' . $this->server['QUERY_STRING'], '', $this->uri);
         }
-        $this->baseUrl = WEB_ROOT;
+        $this->baseUrl = 'http://' . $_SERVER['HTTP_HOST'] . '/';
     }
 
     public function get($key = null, $default = null)
     {
         if ($key ===  null) {
-            return $_GET;
+            return $this->get;
         }
-        return (isset($_GET[$key])) ? $_GET[$key] : $default;
+        return (isset($this->get[$key])) ? $this->get[$key] : $default;
     }
 
     public function post($key = null, $default = null)
     {
         if ($key ===  null) {
-            return $_POST;
+            return $this->post;
         }
-        return (isset($_POST[$key])) ? $_POST[$key] : $default;
+        return (isset($this->post[$key])) ? $this->post[$key] : $default;
     }
 
     public function server($key = null, $default = null)
     {
         if ($key === null) {
-            return $_SERVER;
+            return $this->server;
         }
-        return (isset($_SERVER[$key])) ? $_SERVER[$key] : $default;
+        return (isset($this->server[$key])) ? $this->server[$key] : $default;
     }
 
     public function getBaseUrl()
