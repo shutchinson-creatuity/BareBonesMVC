@@ -178,21 +178,15 @@ footer{
   color: #c0c0c0;
   padding: 0 4px;
 }
-.request_data_container .url{
-  list-style: none;
+
+.path .param{
+  float: left;
+  display: inline-block;
   height: 20px;
-  margin: 0;
-  padding: 0;
+  color: #808080;
   font: 16px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.request_data_container li{
-  float: left;
-  color: #909090;
-}
-.request_data_container .url_param{
-  color: #707070;
-}
-.request_data_container .seperator{
+.path .seperator{
   padding: 0 3px;
   color: #b8b8b8;
 }

@@ -1,8 +1,8 @@
-<ul class="url">
-    <li><span class="base_url"><span class="seperator">/</span></li>
+<div class="path">
+    <div class="param"><span class="seperator">/</span></div>
     <?php foreach ($this->getParams as $currentUrlParam): ?>
         <?php if (!empty($currentUrlParam)): ?>
-            <li><span class="url_var"><?php echo $currentUrlParam; ?></span><span class="seperator">/</span></li>
+            <div class="param"><?php echo $currentUrlParam; ?><span class="seperator">/</span></div>
         <?php endif; ?>
     <?php endforeach; ?>
-</ul>
+</div>
