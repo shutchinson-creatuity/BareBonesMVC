@@ -1,6 +1,6 @@
 <?php
 
-namespace Bones\View;
+namespace Bones\Mvc\View;
 
 class View
 {

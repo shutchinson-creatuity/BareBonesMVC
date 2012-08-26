@@ -1,8 +1,8 @@
 <?php
 
-namespace Bones\Controller;
+namespace Bones\Mvc\Router;
 
-use \Bones\Controller\Request as Request;
+use \Bones\Http\Request as Request;
 
 class Router
 {

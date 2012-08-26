@@ -1,6 +1,6 @@
 <?php
 
-namespace Bones\Core;
+namespace Bones\Loader;
 
 class AutoLoader
 {

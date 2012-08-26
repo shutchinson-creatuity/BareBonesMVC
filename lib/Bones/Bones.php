@@ -2,7 +2,7 @@
 
 namespace Bones;
 
-if (!class_exists('\\Bones\Core\AutoLoader', true)) {
+if (!class_exists('\\Bones\Loader\AutoLoader', true)) {
     require_once 'bootstrap.php';
 }
 

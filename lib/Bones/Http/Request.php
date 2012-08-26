@@ -1,6 +1,6 @@
 <?php
 
-namespace Bones\Controller;
+namespace Bones\Http;
 
 class Request
 {

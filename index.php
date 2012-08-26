@@ -10,8 +10,8 @@ define('DOC_ROOT', __DIR__ . '/');
 # Load the library
 require_once DOC_ROOT . '/lib/Bones/Bones.php';
 
-$view = new \Bones\View\View;
-$request = new \Bones\Controller\Request;
+$view = new \Bones\Mvc\View\View;
+$request = new \Bones\Http\Request;
 
 
 
@@ -27,7 +27,7 @@ $view->main = $view->render('request/request.php');
 
 $view->setViewScriptPath('app/layouts/');
 
-$router = new \Bones\Controller\Router;
+//$router = new \Bones\Mvc\Router\Router;
 //$router->route($request);
 
 echo $view->render('default.php');
