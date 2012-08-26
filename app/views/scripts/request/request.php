@@ -8,16 +8,10 @@
     <p><?php echo $this->baseUrl; ?></p>
 </div>
 <div class="request_data_header grid_3">
-    <h4>Path:</h4>
+    <h4>Uri:</h4>
 </div>
 <div class="request_data_container grid_9">
     <?php echo $this->path; ?>
-</div>
-<div class="request_data_header grid_3">
-    <h4>Full URI:</h4>
-</div>
-<div class="request_data_container grid_9">
-    <p><?php echo rtrim($this->baseUrl, '/') . $this->uri; ?></p>
 </div>
 <div class="request_data_header grid_3">
     <h4>GET Parameters:</h4>

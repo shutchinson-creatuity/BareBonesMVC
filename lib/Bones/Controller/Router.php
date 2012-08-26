@@ -6,6 +6,7 @@ use \Bones\Controller\Request as Request;
 
 class Router
 {
+
     private $routes = array();
 
     public function route(Request $request)
@@ -17,5 +18,4 @@ class Router
             echo $requestUri;
         }
     }
-
 }

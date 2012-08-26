@@ -5,11 +5,12 @@ namespace Bones\Controller;
 class Request
 {
 
-    private $uri        =    null;
     private $baseUrl    =    null;
     private $get        =    array();
     private $post       =    array();
     private $server     =    array();
+    private $uri        =    null;
+    private $uriParams  =    array();
 
     public function __construct()
     {
@@ -20,10 +21,11 @@ class Request
         if (isset($this->server['QUERY_STRING'])) {
             $this->uri = str_replace('?' . $this->server['QUERY_STRING'], '', $this->uri);
         }
+        $this->uriParams = explode('/', $this->uri, -1);
         $this->baseUrl = 'http://' . $_SERVER['HTTP_HOST'] . '/';
     }
 
-    public function get($key = null, $default = null)
+    public function getParam($key = null, $default = null)
     {
         if ($key ===  null) {
             return $this->get;
@@ -31,7 +33,7 @@ class Request
         return (isset($this->get[$key])) ? $this->get[$key] : $default;
     }
 
-    public function post($key = null, $default = null)
+    public function postParam($key = null, $default = null)
     {
         if ($key ===  null) {
             return $this->post;
@@ -39,7 +41,7 @@ class Request
         return (isset($this->post[$key])) ? $this->post[$key] : $default;
     }
 
-    public function server($key = null, $default = null)
+    public function serverParam($key = null, $default = null)
     {
         if ($key === null) {
             return $this->server;
@@ -55,5 +57,10 @@ class Request
     public function getUri()
     {
         return $this->uri;
+    }
+
+    public function getUriParams()
+    {
+        return $this->uriParams;
     }
 }

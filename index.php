@@ -12,13 +12,12 @@ require_once DOC_ROOT . '/lib/Bones/Bones.php';
 
 $view = new \Bones\View\View;
 $request = new \Bones\Controller\Request;
-$router = new \Bones\Controller\Router;
-$router->route($request);
 
 
 
-$view->getParams = $request->get();
-$view->serverParams = $request->server();
+$view->getParams = $request->getParam();
+$view->uriParams = $request->getUriParams();
+$view->serverParams = $request->serverParam();
 $view->baseUrl = $request->getBaseUrl();
 $view->uri = $request->getUri();
 
@@ -28,4 +27,7 @@ $view->main = $view->render('request/request.php');
 
 $view->setViewScriptPath('app/layouts/');
 
-//echo $view->render('default.php');
+$router = new \Bones\Controller\Router;
+//$router->route($request);
+
+echo $view->render('default.php');
