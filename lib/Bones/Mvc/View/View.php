@@ -9,7 +9,7 @@ class View
 
     public function __construct()
     {
-        $this->viewScriptPath = DOC_ROOT . 'app/views/scripts/';
+        $this->viewScriptPath = BASE_DIR . 'app/views/scripts/';
     }
 
     public function render($viewScriptName)
@@ -26,6 +26,6 @@ class View
 
     public function setViewScriptPath($path)
     {
-        $this->viewScriptPath = DOC_ROOT . $path;
+        $this->viewScriptPath = BASE_DIR . $path;
     }
 }
