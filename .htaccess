@@ -387,8 +387,14 @@ RewriteRule . %1/%2 [R=301,L]
 # Flat Link Structure
 # ----------------------------------------------------------------------
 
-RewriteRule ^([^/]*)/?([^/]*)/?([^/]*)/?([^/]*)/?([^/]*)/?([^/]*)/?([^/]*)/?([^/]*)/?([^/]*)/$ /index.php?node1=$1&node2=$2&node3=$3&node4=$4&node5=$5&node6=$6&node7=$7&node8=$8&node9=$9 [L,NC]
+#RewriteRule ^([^/]*)/?([^/]*)/?([^/]*)/?([^/]*)/?([^/]*)/?([^/]*)/?([^/]*)/?([^/]*)/?([^/]*)/$ /index.php?node1=$1&node2=$2&node3=$3&node4=$4&node5=$5&node6=$6&node7=$7&node8=$8&node9=$9 [L,NC]
 #             Node1    Node2    Node3    Node4    Node5    Node6    Node7    Node8    Node9
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ index.php [NC,L]
+
 
 # ----------------------------------------------------------------------
 # Built-in filename-based cache busting
