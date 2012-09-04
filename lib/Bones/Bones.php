@@ -6,7 +6,7 @@ if (!class_exists('\\Bones\Loader\AutoLoader', true)) {
     require_once 'bootstrap.php';
 }
 
-use \Bones\DI\DI;
+use \Bones\Di\Di;
 
 
 class Bones {
@@ -15,7 +15,7 @@ class Bones {
 
     public function __construct()
     {
-        $this->di = new DI;
+        $this->di = new Di;
         $this->di->set('request', new Http\Request);
         echo $this->di->get('request')->uriParam(1);
     }

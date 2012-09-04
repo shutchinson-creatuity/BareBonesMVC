@@ -1,8 +1,8 @@
 <?php
 
-namespace Bones\DI;
+namespace Bones\Di;
 
-class DI
+class Di
 {
 
     private $objects = array();
