@@ -5,12 +5,13 @@ namespace Bones\Http;
 class Request
 {
 
-    private $baseUrl    =    null;
-    private $get        =    array();
-    private $post       =    array();
-    private $server     =    array();
-    private $uri        =    null;
-    private $uriParams  =    array();
+    private $baseUrl   = null;
+    private $get       = array();
+    private $post      = array();
+    private $server    = array();
+    private $uri       = '';
+    private $uriParams = array();
+    private $method    = 'get';
 
     public function __construct()
     {
@@ -22,6 +23,7 @@ class Request
             $this->uri = str_replace('?' . $this->server['QUERY_STRING'], '', $this->uri);
         }
         $this->uriParams = explode('/', $this->uri, -1);
+        $this->method = isset($_SERVER['REQUEST_METHOD']) ? strtolower($_SERVER['REQUEST_METHOD']) : 'get';
         $this->baseUrl = 'http://' . $_SERVER['HTTP_HOST'] . '/';
     }
 
@@ -31,6 +33,14 @@ class Request
             return $this->get;
         }
         return (isset($this->get[$key])) ? $this->get[$key] : $default;
+    }
+
+    public function uriParam($key = null, $default = null)
+    {
+        if ($key ===  null) {
+            return $this->uriParams;
+        }
+        return (isset($this->uriParams[$key])) ? $this->uriParams[$key] : $default;
     }
 
     public function postParam($key = null, $default = null)
@@ -59,8 +69,8 @@ class Request
         return $this->uri;
     }
 
-    public function getUriParams()
+    public function getMethod()
     {
-        return $this->uriParams;
+        return $this->method;
     }
 }

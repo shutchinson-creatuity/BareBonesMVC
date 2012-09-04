@@ -2,23 +2,27 @@
 
 namespace Bones\Mvc\Controller;
 
+use \Bones\Mvc\View\View;
+use \Bones\Http\Request;
+
 class SiteController extends Controller
 {
 
-    private $request    = null;
-    private $response   = null;
-    private $router     = null;
-    private $view       = null;
+    private $request  = null;
+    private $response = null;
+    private $router   = null;
+    private $view     = null;
 
 
     public function __construct()
     {
-        $this->view = new \Bones\Mvc\View\View;
-        $this->request = new \Bones\Http\Request;
+        $this->view = new View;
+        $this->request = new Request;
 
         $this->view->getParams = $this->request->getParam();
         $this->view->uriParams = $this->request->getUriParams();
         $this->view->serverParams = $this->request->serverParam();
+        $this->view->requestMethod = $this->request->getMethod();
         $this->view->baseUrl = $this->request->getBaseUrl();
         $this->view->uri = $this->request->getUri();
         $this->view->path = $this->view->render('request/path.php');
@@ -27,6 +31,4 @@ class SiteController extends Controller
         $this->view->setViewScriptPath('app/layouts/scripts/');
         echo $this->view->render('default.php');
     }
-
-
 }

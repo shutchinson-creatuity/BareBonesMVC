@@ -14,6 +14,12 @@
     <?php echo $this->path; ?>
 </div>
 <div class="request_data_header grid_3">
+    <h4>Request Method:</h4>
+</div>
+<div class="request_data_container grid_9">
+    <p><?php echo $this->requestMethod; ?></p>
+</div>
+<div class="request_data_header grid_3">
     <h4>URI Parameters:</h4>
 </div>
 <div class="request_data_container grid_9">
