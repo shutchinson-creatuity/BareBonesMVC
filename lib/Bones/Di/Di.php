@@ -18,6 +18,4 @@ class Di
     {
         return (array_key_exists($alias, $this->objects)) ? $this->objects[$alias] : null;
     }
-
-
 }
