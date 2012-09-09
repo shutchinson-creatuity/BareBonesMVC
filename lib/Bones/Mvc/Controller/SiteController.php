@@ -20,7 +20,7 @@ class SiteController extends Controller
         $this->request = new Request;
 
         $this->view->getParams = $this->request->getParam();
-        $this->view->uriParams = $this->request->getUriParams();
+        $this->view->uriParams = $this->request->UriParam();
         $this->view->serverParams = $this->request->serverParam();
         $this->view->requestMethod = $this->request->getMethod();
         $this->view->baseUrl = $this->request->getBaseUrl();

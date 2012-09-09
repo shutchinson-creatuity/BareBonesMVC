@@ -1,0 +1,426 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+
+::-moz-selection {
+    background: #fdf052;
+    color: #484848;
+    text-shadow: none;
+}
+
+::selection {
+    background: #fdf052;
+    color: #484848;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Scott Hutchinson
+   ========================================================================== */
+
+/* =============================================================================
+   Grid
+   ========================================================================== */
+
+.grid_1 { width: 6.6666666666667%; }
+.grid_2 { width: 15%; }
+.grid_3 { width: 23.333333333333%; }
+.grid_4 { width: 31.666666666667%; }
+.grid_5 { width: 40%; }
+.grid_6 { width: 48.333333333333%; }
+.grid_7 { width: 56.666666666667%; }
+.grid_8 { width: 65%; }
+.grid_9 { width: 73.333333333333%; }
+.grid_10 { width: 81.666666666667%; }
+.grid_11 { width: 90%; }
+.grid_12 { width: 98.333333333333%; }
+.grid_1,.grid_2,.grid_3,.grid_4,.grid_5,.grid_6,.grid_7,.grid_8,.grid_9,.grid_10,.grid_11,.grid_12 {
+  margin-left: 0.83333333333333%;
+  margin-right: 0.83333333333333%;
+  float: left;
+  display: block;
+}
+.alpha{margin-left:0px;}
+.omega{margin-right:0px;}
+.main, .grid_wrapper{
+  min-width: 800px;
+  max-width: 1600px;       /* Master grid width */
+  margin: auto;
+}
+.clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}.clearfix:after{clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0}* html .clearfix,*:first-child+html .clearfix{zoom:1}
+
+
+/* =============================================================================
+   Top Level Elements
+   ========================================================================== */
+
+html, body{
+  height: 100%;
+}
+body{
+
+}
+.main_wrapper{
+  min-height: 100%;
+  position: relative;
+  padding: 0 0 240px;    /* bottom padding must be the same as header height */
+}
+header{
+  background: #e0e0e0;
+  height: 48px;
+}
+.main{
+  padding: 60px 0 120px;
+}
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 240px;
+  background: #b0b0b0;
+}
+
+
+/* =============================================================================
+ Main Elements
+ ========================================================================== */
+
+.content h1, .content h2, .content h3, .content p{
+  margin: 0 0 6px;
+  color: #505050;
+  font: 900 36px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.content h2{
+  font-size: 30px;
+  color: #606060;
+}
+.content h3{
+  margin: 0;
+  font-size: 24px;
+  color: #707070;
+}
+.content h4{
+  margin: 0;
+  font-size: 18px;
+  color: #707070;
+}
+.content p{
+  margin: 0 0 16px;
+  /*font: 18px/180% "Hoefler Text", Constantia, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;*/
+  font: 18px/190% "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #888;
+}
+.content p a,
+.content p a:link,
+.content p a:active,
+.content p a:visited{
+  color: #4c9dcc;
+  text-decoration: none;
+  border-bottom: 2px solid #4c9dcc;
+}
+.content p a:hover{
+  color: #0081cc;
+  border-bottom: 2px solid #0081cc
+}
+
+.request_header{
+  margin-bottom: 20px;
+}
+.request_data_header,
+.request_data_container{
+  margin-bottom: 40px;
+  font: 16px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.request_data_container p{
+  line-height: 20px;
+  font-size: 16px;
+  color: #909090;
+}
+.request_data_container em{
+  color: #707070;
+  font-style: normal;
+}
+.request_data_container .dash{
+  color: #c0c0c0;
+  padding: 0 4px;
+}
+
+.path .param{
+  float: left;
+  display: inline-block;
+  height: 20px;
+  color: #808080;
+  font: 16px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.path .seperator{
+  padding: 0 3px;
+  color: #b8b8b8;
+}
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow:none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

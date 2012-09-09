@@ -1,8 +1,8 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -10,10 +10,12 @@
     <meta name="description" content="Development Environment">
     <meta name="author" content="Scott Hutchinson">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="<?php echo $this->baseUrl; ?>css/style.css">
-    <script src="<?php echo $this->baseUrl; ?>js/libs/modernizr-2.5.3.min.js"></script>
+    <link rel="stylesheet" href="<?php echo $this->baseUrl; ?>css/normalize.css">
+    <link rel="stylesheet" href="<?php echo $this->baseUrl; ?>css/main.css">
+    <script src="<?php echo $this->baseUrl; ?>js/vendor/modernizr-2.6.1.min.js"></script>
 </head>
 <body>
+<!--[if lt IE 7]><p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p><![endif]-->
 <div class="main_wrapper">
     <header>
         <nav class="grid_wrapper clearfix">
@@ -37,8 +39,8 @@
         </div>
     </footer>
 </div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="<?php echo $this->baseUrl; ?>js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="<?php echo $this->baseUrl; ?>js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
 <script src="<?php echo $this->baseUrl; ?>js/plugins.js"></script>
 </body>
 </html>

@@ -11,4 +11,5 @@ defined('BASE_DIR') || define('BASE_DIR', __DIR__ . '/');
 require_once BASE_DIR . '/lib/Bones/Bones.php';
 
 $app = new \Bones\Bones;
+$siteController = new \Bones\Mvc\Controller\SiteController;
 
