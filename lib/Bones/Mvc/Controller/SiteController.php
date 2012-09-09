@@ -19,6 +19,11 @@ class SiteController extends Controller
         $this->view = new View;
         $this->request = new Request;
 
+
+    }
+
+    public function renderDebug()
+    {
         $this->view->getParams = $this->request->getParam();
         $this->view->uriParams = $this->request->UriParam();
         $this->view->serverParams = $this->request->serverParam();
@@ -31,4 +36,6 @@ class SiteController extends Controller
         $this->view->setViewScriptPath('app/layouts/scripts/');
         echo $this->view->render('default.php');
     }
+
+
 }

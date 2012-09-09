@@ -18,4 +18,9 @@ class Di
     {
         return (array_key_exists($alias, $this->objects)) ? $this->objects[$alias] : null;
     }
+
+    public function __get($alias)
+    {
+        return $this->get($alias);
+    }
 }
